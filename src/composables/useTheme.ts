@@ -1,0 +1,35 @@
+import { ref } from 'vue'
+
+// Shared reactive state so all components stay in sync
+const isDark = ref(true)
+
+export function useTheme() {
+  function initTheme() {
+    const saved = localStorage.getItem('theme')
+    // Default to dark for a streaming app, but respect saved preference
+    if (saved === 'light') {
+      isDark.value = false
+      document.documentElement.classList.remove('dark')
+    } else {
+      isDark.value = true
+      document.documentElement.classList.add('dark')
+    }
+  }
+
+  function toggleTheme() {
+    isDark.value = !isDark.value
+    if (isDark.value) {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('theme', 'dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('theme', 'light')
+    }
+  }
+
+  return {
+    isDark,
+    toggleTheme,
+    initTheme,
+  }
+}
