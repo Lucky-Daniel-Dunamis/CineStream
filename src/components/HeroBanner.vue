@@ -16,7 +16,7 @@ const emit = defineEmits<{
 </script>
 
 <template>
-  <div v-if="movie" class="relative w-full h-[65vh] min-h-[420px] max-h-[680px] overflow-hidden bg-background">
+  <div v-if="movie" class="relative w-full h-[65vh] min-h-105 max-h-170 overflow-hidden bg-background">
         <!-- Background Backdrop Image -->
     <img
       :src="getTmdbImageUrl(movie.backdrop_path, 'original')"
@@ -26,10 +26,10 @@ const emit = defineEmits<{
 
     <!-- Cinematic Vignette & Gradients -->
     <!-- 1. Bottom fade into page background -->
-    <div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+    <div class="absolute inset-0 bg-linear-to-* from-background via-background/60 to-transparent" />
     
     <!-- 2. Deep dark overlay on the left so white text is crisp -->
-    <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent w-full md:w-3/4" />
+    <div class="absolute inset-0 bg-linear-to-* from-black/90 via-black/60 to-transparent w-full md:w-3/4" />
 
     <!-- 3. Subtle overall dark tint -->
     <div class="absolute inset-0 bg-black/20" />

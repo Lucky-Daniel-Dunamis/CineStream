@@ -39,7 +39,7 @@ function closeDialog() {
             class="h-full w-full object-cover object-center"
           />
           <!-- Gradient so text and buttons pop -->
-          <div class="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
+          <div class="absolute inset-0 bg-linear-to-t from-card via-card/40 to-transparent" />
           
           <!-- Rating badge pinned on image -->
           <div class="absolute bottom-4 left-6 flex items-center gap-2">

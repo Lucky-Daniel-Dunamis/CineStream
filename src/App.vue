@@ -98,7 +98,7 @@ onMounted(() => {
     <Navbar @search="handleSearch" />
 
     <!-- 2. Hero Banner (or Loading Skeleton for Banner) -->
-    <div v-if="isLoading && movies.length === 0" class="w-full h-[60vh] max-h-[650px]">
+    <div v-if="isLoading && movies.length === 0" class="w-full h-[60vh] max-h-162.5:">
       <Skeleton class="h-full w-full rounded-none" />
     </div>
     <HeroBanner
@@ -149,7 +149,7 @@ onMounted(() => {
         class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6"
       >
         <div v-for="n in 10" :key="n" class="space-y-3">
-          <Skeleton class="aspect-[2/3] w-full rounded-xl" />
+          <Skeleton class="aspect-2/3 w-full rounded-xl" />
           <Skeleton class="h-4 w-3/4 rounded" />
           <Skeleton class="h-3 w-1/3 rounded" />
         </div>

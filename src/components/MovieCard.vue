@@ -18,7 +18,7 @@ const releaseYear = props.movie.release_date ? props.movie.release_date.slice(0,
 <template>
   <Card class="group overflow-hidden rounded-xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-primary/50 cursor-pointer">
     <!-- Movie Poster Container with aspect ratio -->
-    <div class="relative aspect-[2/3] w-full overflow-hidden bg-muted">
+    <div class="relative aspect-2/3 w-full overflow-hidden bg-muted">
       <img
         :src="getTmdbImageUrl(movie.poster_path, 'w500')"
         :alt="movie.title"
