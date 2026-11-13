@@ -31,7 +31,7 @@ function handleSearch() {
           <div class="h-9 w-9 rounded-lg bg-red-600 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
             <Film class="h-5 w-5" />
           </div>
-          <span class="text-xl font-bold tracking-tight bg-linear-to-* from-red-500 to-rose-400 bg-clip-text text-transparent">
+          <span class="text-xl font-bold tracking-tight bg-linear-to-r from-red-500 to-rose-400 bg-clip-text text-transparent">
             CineStream
           </span>
         </a>
